@@ -1,0 +1,1 @@
+changed spring.profiles to spring.config.activate.on-profile
