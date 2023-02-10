@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: demo-awspring-config-client
+
+  config:
+    import:
+      # Bootstrap時に読まれる先を指定する。(当たり前だが)ここで指定したら読まれるし、指定しなければ読みにいかない。
+      # optionalは「あれば読み込むけどなければエラーにせずに無視してよい」なので不要なものは書かない(当たり前)
+      # なお実際に読み込まれるのはlistの逆順で、さらに要素の中にセミコロン区切りでキーを複数書くとそれも逆順に読み込まれる。
+      - "aws-parameterstore:/config/${spring.application.name}/"
+      - "aws-secretsmanager:/secret/demo-awspring-config-client"
+      # ARNでも指定できる。ARN中のコロンはちゃんと理解されるので気にしなくていい。
+      # シークレット名だけで指定すると以下URLにあるようにうまく読み取れないことがAWS APIの制限としてあるのでその場合はARNを使用する。
+      # https://docs.aws.amazon.com/ja_jp/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen
+      #- "aws-secretsmanager:arn:aws:secretsmanager:ap-northeast-1:129008548655:secret:/secret/demo-awspring-config-client-qp6v3s"
+
+# ここで failFast: false を設定しておかないとSpringロゴが出た後に
+# 自動で読みに行く /secret/application シークレットがなく、読み込みに失敗してアプリケーション起動に失敗する
+# これが正常な動きかどうかはよくわからない。。。
+aws:
+  secretsmanager:
+    failFast: false
