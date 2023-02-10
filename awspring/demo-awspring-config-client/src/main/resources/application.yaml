@@ -1,3 +1,9 @@
 spring:
   application:
     name: demo-awspring-config-client
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
