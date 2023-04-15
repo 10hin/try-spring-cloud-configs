@@ -2,18 +2,18 @@ app:
   all:
     env:
       dev:
-        message: application-prod.yaml#/app/all/env/dev/message
+        message: application-prod.yaml#/app/all/env/dev/message --- 1
       prod:
-        message: application-prod.yaml#/app/all/env/prod/message
+        message: application-prod.yaml#/app/all/env/prod/message --- 1
   myapp:
     env:
       dev:
-        message: application-prod.yaml#/app/myapp/env/dev/message
+        message: application-prod.yaml#/app/myapp/env/dev/message --- 1
       prod:
-        message: application-prod.yaml#/app/myapp/env/prod/message
+        message: application-prod.yaml#/app/myapp/env/prod/message --- 1
   myapp2:
     env:
       dev:
-        message: application-prod.yaml#/app/myapp2/env/dev/message
+        message: application-prod.yaml#/app/myapp2/env/dev/message --- 1
       prod:
-        message: application-prod.yaml#/app/myapp2/env/prod/message
+        message: application-prod.yaml#/app/myapp2/env/prod/message --- 1
