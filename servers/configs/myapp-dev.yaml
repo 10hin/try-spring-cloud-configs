@@ -2,14 +2,14 @@ app:
   myapp:
     env:
       dev:
-        message: myapp-dev.yaml#/app/myapp/env/dev/message --- 4
+        message: myapp-dev.yaml#/app/myapp/env/dev/message --- 5
       prod:
-        message: myapp-dev.yaml#/app/myapp/env/prod/message --- 4
+        message: myapp-dev.yaml#/app/myapp/env/prod/message --- 5
   myapp2:
     env:
       default:
-        message: myapp-dev.yaml#/app/myapp2/env/default/message --- 4
+        message: myapp-dev.yaml#/app/myapp2/env/default/message --- 5
       dev:
-        message: myapp-dev.yaml#/app/myapp2/env/dev/message --- 4
+        message: myapp-dev.yaml#/app/myapp2/env/dev/message --- 5
       prod:
-        message: myapp-dev.yaml#/app/myapp2/env/prod/message --- 4
+        message: myapp-dev.yaml#/app/myapp2/env/prod/message --- 5
