@@ -1,4 +1,9 @@
 app:
+  all:
+    dev:
+      message: myapp.yaml#/app/all/env/dev/message
+    prod:
+      message: myapp.yaml#/app/all/env/prod/message
   myapp:
     env:
       default:
